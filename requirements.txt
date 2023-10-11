@@ -1,8 +1,4 @@
 Flask==2.0.1
 vaderSentiment==3.3.2
 Werkzeug==2.2.2
-<<<<<<< HEAD
-gunicorn==0.17.0
-=======
-gunicorn==0.17.0
->>>>>>> 01d9a98e89c6bca554c810bceb89b06d72698704
+gunicorn
