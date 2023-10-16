@@ -2,11 +2,16 @@ from flask import Flask, render_template, request, jsonify
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 app = Flask(__name__)
+app.config["DEBBUG"] = True
 
 analyser = SentimentIntensityAnalyzer()
 
 @app.route('/')
 def index():
+    return "testing testing"
+
+@app.route('/home')
+def home():
     return render_template('index.html')
 
 @app.route('/analyse_sentiment', methods=['POST'])
@@ -27,4 +32,4 @@ def sentiment_analyzer_scores(sentence):
     return sentiment_label
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
