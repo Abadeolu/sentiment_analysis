@@ -8,10 +8,6 @@ analyser = SentimentIntensityAnalyzer()
 
 @app.route('/')
 def index():
-    return "testing testing"
-
-@app.route('/home')
-def home():
     return render_template('index.html')
 
 @app.route('/analyse_sentiment', methods=['POST'])
